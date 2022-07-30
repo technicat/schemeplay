@@ -1,3 +1,5 @@
+#!/usr/local/bin/gosh
+
 (include "game.scm")
 
 (define-class <checkers> (<boardgame>) ())
