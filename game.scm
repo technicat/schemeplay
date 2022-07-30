@@ -1,4 +1,6 @@
-(define-class <game> () ())
+(define-class <game> () (players))
+
+(define-class <player> () (name))
 
 (define-method play-me ((game <game>)))
 
