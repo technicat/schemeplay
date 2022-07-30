@@ -1,7 +1,9 @@
 (define-class <game> () ())
 
-(define-method play ((game <game>)))
+(define-method play-me ((game <game>)))
 
-(define-class <boardgame> () (size))
+(define-method play-self ((game <game>)))
+
+(define-class <boardgame> (<game>) (size))
 
 (define-class <piece> () ())

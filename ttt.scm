@@ -16,6 +16,7 @@
        . restargs
       )
     (let ((game (make <tictactoe>)))
+      (play-self game)
     )))
 
 
