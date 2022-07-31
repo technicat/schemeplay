@@ -8,6 +8,4 @@
 
 (define-method play-self ((game <game>)))
 
-(define-class <boardgame> (<game>) (size))
-
-(define-class <piece> () ())
+(define-method play-turn ((game <game>) (player <player>)))

@@ -1,6 +1,6 @@
 #!/usr/local/bin/gosh
 
-(include "game.scm")
+(include "boardgame.scm")
 
 (define-class <tictactoe> (<boardgame>) ())
 

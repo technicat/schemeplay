@@ -1,4 +1,4 @@
-(include "game.scm")
+(include "boardgame.scm")
 
 (define-class <chess> (<boardgame>) ())
 
