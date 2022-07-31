@@ -2,8 +2,6 @@
 
 (define-class <player> () (name))
 
-(define-class <turn> () (num player))
-
 (define-method play-me ((game <game>)))
 
 (define-method play-self ((game <game>)))
