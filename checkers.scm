@@ -2,7 +2,7 @@
 
 (include "boardgame.scm")
 
-(define-class <checkers> (<boardgame>) ())
+(define-class <checkers> (<gridgame>) ())
 
 (define-class <red> (<piece>) ())
 

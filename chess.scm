@@ -1,6 +1,6 @@
 (include "boardgame.scm")
 
-(define-class <chess> (<boardgame>) ())
+(define-class <chess> (<gridgame>) ())
 
 (define-class <pawn> (<piece>) ())
 
