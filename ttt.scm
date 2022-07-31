@@ -4,9 +4,9 @@
 
 (define-class <tictactoe> (<boardgame>) ())
 
-(define-class <x> (<piece>) ())
+(define-class <x> (<player>) ())
 
-(define-class <o> (<piece>) ())
+(define-class <o> (<player>) ())
 
 (use gauche.parseopt) ; command line args
 
