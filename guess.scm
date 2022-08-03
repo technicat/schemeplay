@@ -6,17 +6,18 @@
 (define (main args)
   (let-args (cdr args)
       ((h "h|help")
+        (r "r|range=i" 10)
        . restargs
       )
       (if h
          (print "guess.scm -h|help")
-        (play (make <guess>)))))
+        (play (make <guess> :number (random-integer r))))))
 
 (include "game.scm")
 
 (define-class <guess> (<game>) 
-    ((number :init-value (random-integer 10) :accessor number) 
-    (guess :init-value -1 :accessor guess)))
+    ((number :init-keyword :number :getter number)
+        (guess :init-value -1 :accessor guess)))
 
 (define-method play-turn ((game <guess>))
     (print "Guess what number I'm thinking?")
