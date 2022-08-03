@@ -15,7 +15,7 @@
 (include "game.scm")
 
 (define-class <guess> (<game>) 
-    ((number :init-value 0 :accessor number) 
+    ((number :init-value (random-integer 10) :accessor number) 
     (guess :init-value -1 :accessor guess)))
 
 (define-method play-turn ((game <guess>))
