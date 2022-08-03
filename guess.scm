@@ -16,15 +16,18 @@
 (include "game.scm")
 
 (define-class <guess> (<game>) 
-    ((number :init-keyword :number :getter number)
-        (guess :init-value -1 :accessor guess)))
+    ((number :init-keyword :number :getter number)))
 
 (define-method play-turn ((game <guess>))
     (print "Guess what number I'm thinking?")
     (let ((num (string->number (read-line))))
         (if num
-            (set! (guess game) num)
-            (print "Please enter a number."))))
+            num
+            (play-turn game))))
 
 (define-method end? ((game <game>))
-    (= (guess game) (number game)))
+    (and (not (null? (turns game)))
+        (= (latest-guess game) (number game))))
+
+(define-method latest-guess ((game <game>))
+    (car (turns game)))
