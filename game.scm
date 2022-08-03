@@ -8,6 +8,8 @@
 (define-method play ((game <game>))
     (if (end? game)
         (print "Game Over")
-        (play-turn game)))
+        (begin
+            (play-turn game)
+            (play game))))
 
 (define-method play-turn ((game <game>)))
