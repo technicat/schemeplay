@@ -20,9 +20,10 @@
 
 (define-method play-turn ((game <guess>))
     (print "Guess what number I'm thinking?")
-    (let ((num (read)))
-        (if (number? num)
-            (set! (guess game) num))))
+    (let ((num (string->number (read-line))))
+        (if num
+            (set! (guess game) num)
+            (print "Please enter a number."))))
 
 (define-method end? ((game <game>))
     (= (guess game) (number game)))
