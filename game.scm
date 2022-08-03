@@ -2,8 +2,12 @@
 
 (define-class <player> () (name))
 
-(define-method play-me ((game <game>)))
+(define-method end? ((game <game>))
+    #f)
 
-(define-method play-self ((game <game>)))
+(define-method play ((game <game>))
+    (if (end? game)
+        (print "Game Over")
+        (play-turn game)))
 
-(define-method play-turn ((game <game>) (player <player>)))
+(define-method play-turn ((game <game>)))
