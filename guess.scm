@@ -27,5 +27,5 @@
 
 (define-method end? ((game <guess>))
  (and (not (null? (moves game)))
-  (= (car (turns)) (number game))))
+  (= (car (moves game)) (number game))))
 

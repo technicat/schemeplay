@@ -28,5 +28,5 @@
  (let f ((playas (players game)))
   (if (not (null? playas))
    (let ((playa (car playas)))
-    (push (moves game) (your-move playa game))
+    (push! (moves game) (your-move playa game))
     (f (cdr playas))))))
