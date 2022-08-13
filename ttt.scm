@@ -11,12 +11,12 @@
 (use gauche.parseopt) ; command line args
 
 (define (main args)
-  (let-args (cdr args)
-      ((r "l|level=i" 1)
-       . restargs
-      )
-    (let ((game (make <tictactoe>)))
-      (play-self game)
-    )))
+ (let-args (cdr args)
+  ((r "l|level=i" 1)
+   . restargs
+   )
+  (let ((game (make <tictactoe>)))
+   (play-self game)
+   )))
 
 
