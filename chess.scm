@@ -1,18 +1,28 @@
 (include "boardgame.scm")
 
-(define-class <chess> (<gridgame>) ())
+(define-class <chess> (<gridgame>)
+ ())
 
-(define-class <pawn> (<piece>) ())
+(define-class <cpiece> (<piece>)
+ ())
 
-(define-class <king> (<piece>) ())
+(define-class <pawn> (<piece>)
+ ())
 
-(define-class <queen> (<piece>) ())
+(define-class <king> (<piece>)
+ ())
 
-(define-class <bishop> (<piece>) ())
+(define-class <queen> (<piece>)
+ ())
 
-(define-class <knight> (<piece>) ())
+(define-class <bishop> (<piece>)
+ ())
 
-(define-class <rook> (<piece>) ())
+(define-class <knight> (<piece>)
+ ())
+
+(define-class <rook> (<piece>)
+ ())
 
 
 

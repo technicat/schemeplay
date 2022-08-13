@@ -1,18 +1,28 @@
 (include "boardgame.scm")
 
-(define-class <chinesechess> (<gridgame>) ())
+(define-class <chinesechess> (<gridgame>)
+ ())
 
-(define-class <pawn> (<piece>) ())
+(define-class <ccpiece> (<piece>)
+ ())
 
-(define-class <king> (<piece>) ())
+(define-class <pawn> (<ccpiece>)
+ ())
 
-(define-class <queen> (<piece>) ())
+(define-class <king> (<ccpiece>)
+ ())
 
-(define-class <bishop> (<piece>) ())
+(define-class <queen> (<ccpiece>)
+ ())
 
-(define-class <knight> (<piece>) ())
+(define-class <bishop> (<ccpiece>)
+ ())
 
-(define-class <rook> (<piece>) ())
+(define-class <knight> (<ccpiece>)
+ ())
+
+(define-class <rook> (<ccpiece>)
+ ())
 
 
 

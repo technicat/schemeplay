@@ -2,10 +2,13 @@
 
 (include "boardgame.scm")
 
-(define-class <checkers> (<gridgame>) ())
+(define-class <checkers> (<gridgame>)
+ ())
 
-(define-class <red> (<piece>) ())
+(define-class <red> (<piece>)
+ ())
 
-(define-class <white> (<piece>) ())
+(define-class <white> (<piece>)
+ ())
 
 

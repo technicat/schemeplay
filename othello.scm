@@ -2,10 +2,16 @@
 
 (include "boardgame.scm")
 
-(define-class <othello> (<gridgame>) ())
+(define-class <othello> (<gridgame>)
+ ())
 
-(define-class <black> (<piece>) ())
+(define-class <opiece> (<piece>)
+ ())
 
-(define-class <white> (<piece>) ())
+(define-class <black> (<opiece>)
+ ())
+
+(define-class <white> (<opiece>)
+ ())
 
 

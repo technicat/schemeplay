@@ -8,10 +8,10 @@
  ((name :getter name :init-keyword :name)))
 
 (define-class <computer> (<player>)
-    ())
+ ())
 
 (define-class <human> (<player>)
-    ())
+ ())
 
 (define-method end? ((game <game>))
  #f)

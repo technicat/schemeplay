@@ -1,14 +1,8 @@
 #!/usr/local/bin/gosh
 
-(include "boardgame.scm")
-
-(define-class <tictactoe> (<boardgame>) ())
-
-(define-class <x> (<player>) ())
-
-(define-class <o> (<player>) ())
-
 (use gauche.parseopt) ; command line args
+
+(include "boardgame.scm")
 
 (define (main args)
  (let-args (cdr args)
@@ -18,5 +12,16 @@
   (let ((game (make <tictactoe>)))
    (play-self game)
    )))
+
+(define-class <tictactoe> (<boardgame>)
+ ())
+
+(define-class <x> (<player>)
+ ())
+
+(define-class <o> (<player>)
+ ())
+
+
 
 
