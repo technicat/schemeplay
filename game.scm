@@ -1,3 +1,5 @@
+(use srfi-13) ; string trim and pad
+
 (define-class <game> ()
  ((players :getter players :init-keyword :players)
   (moves :accessor moves :init-value '())))
@@ -14,8 +16,9 @@
 (define-method end? ((game <game>))
  #f)
 
+; todo - move this to text-game(use srfi-13) ; string trim and pad
 (define-method your-move ((player <human>) (game <game>))
- (read-line))
+ (string-trim (read-line)))
 
 (define-method play ((game <game>))
  (if (end? game)
