@@ -16,7 +16,7 @@
  ())
 
 (define-method board-size ((game <gridgame>))
-3)
+ 3)
 
 (define-method initialize ((game <tictactoe>) args)
  (next-method)
@@ -27,13 +27,13 @@
 
 
 (define-method char ((piece <x>))
-    "X")
+ "X")
 
 (define-class <o> (<piece>)
  ())
 
 (define-method char ((piece <o>))
-    "O")
+ "O")
 
 
 

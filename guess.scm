@@ -19,6 +19,9 @@
 (define-class <guess> (<game>)
  ((number :init-keyword :number :getter number)))
 
+(define-class <guess-move> (<move>)
+ ((guessed :accessor guessed :init-keyword :guessed)))
+
 (define-method initialize ((game <guess>) args)
  (next-method)
  (push! (players game) (make <human> :name "Human")))
@@ -26,11 +29,14 @@
 (define-method your-move ((player <human>) (game <guess>))
  (print #"~(name player), guess what number I'm thinking?")
  (let ((num (string->number (next-method))))
-  (if num num
-   (begin (print "That's not a number.")
+  (if num
+   (make <guess-move> :player player :guessed num)
+   (begin
+    (print "That's not a number.")
     (your-move player game)))))
 
 (define-method end? ((game <guess>))
  (and (not (null? (moves game)))
-  (= (car (moves game)) (number game))))
+  (let ((move (car (moves game))))
+   (= (guessed move) (number game)))))
 

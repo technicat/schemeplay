@@ -6,15 +6,15 @@
  ())
 
 (define-method board-size ((game <gridgame>))
-0)
+ 0)
 
 (define-method make-board ((game <gridgame>))
-    (let ((bs (board-size game)))
- (set! (board game) (make-array (shape 0 bs 0 bs) (make <empty>)))))
+ (let ((bs (board-size game)))
+  (set! (board game) (make-array (shape 0 bs 0 bs) (make <empty>)))))
 
 (define-method show-board ((game <gridgame>))
  (array-for-each-index (board game)
-    (cut show-square game <> <>)))
+  (cut show-square game <> <>)))
 
 (define-method show-square ((game <gridgame>) i j)
  (print (get-piece game i j)))
