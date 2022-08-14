@@ -1,7 +1,7 @@
 (use srfi-13) ; string trim and pad
 
 (define-class <game> ()
- ((players :getter players :init-keyword :players)
+ ((players :accessor players :init-value '())
   (moves :accessor moves :init-value '())))
 
 (define-class <player> ()
