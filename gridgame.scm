@@ -11,4 +11,10 @@
 
 (define-method show-board ((game <gridgame>))
  (array-for-each-index (board game)
-    (lambda (i j) (print (array-ref (board game) i j)))))
+    (cut show-square game <> <>)))
+
+(define-method show-square ((game <gridgame>) i j)
+ (print (get-piece game i j)))
+
+(define-method get-piece ((game <gridgame>) i j)
+ (array-ref (board game) i j))
