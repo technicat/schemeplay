@@ -8,9 +8,17 @@
  (push! (players game) (make <computer> :name "Computer"))
  (push! (players game) (make <human> :name "Human")))
 
-(define-class <piece> () ())
+(define-class <piece> ()
+    ())
 
-(define-class <empty> (<piece>) ())
+(define-method char ((piece <piece>))
+    "?")
+
+(define-class <empty> (<piece>)
+ ())
+
+(define-method char ((piece <empty>))
+    " ")
 
 (define-class <move> ()
  (player piece))

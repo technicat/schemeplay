@@ -3,11 +3,14 @@
 (include "boardgame.scm")
 
 (define-class <gridgame> (<boardgame>)
- ((size :accessor size)))
+ ())
 
-(define-method make-board ((game <gridgame>) bs)
- (set! (size game) bs)
- (set! (board game) (make-array (shape 0 bs 0 bs) (make <empty>))))
+(define-method board-size ((game <gridgame>))
+0)
+
+(define-method make-board ((game <gridgame>))
+    (let ((bs (board-size game)))
+ (set! (board game) (make-array (shape 0 bs 0 bs) (make <empty>)))))
 
 (define-method show-board ((game <gridgame>))
  (array-for-each-index (board game)
