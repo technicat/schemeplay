@@ -7,7 +7,7 @@
 
 (define-method make-board ((game <gridgame>) bs)
  (set! (size game) bs)
- (set! (board game) (make-array (shape 0 bs 0 bs) '())))
+ (set! (board game) (make-array (shape 0 bs 0 bs) (make <empty>))))
 
 (define-method show-board ((game <gridgame>))
  (array-for-each-index (board game)

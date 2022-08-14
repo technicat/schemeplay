@@ -10,6 +10,8 @@
 
 (define-class <piece> () ())
 
+(define-class <empty> (<piece>) ())
+
 (define-class <move> ()
  (player piece))
 
