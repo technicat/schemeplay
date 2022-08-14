@@ -1,4 +1,6 @@
-(include "boardgame.scm")
+#!/usr/local/bin/gosh
+
+(include "gridgame.scm")
 
 (define-class <chinesechess> (<gridgame>)
  ())

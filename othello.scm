@@ -1,6 +1,6 @@
 #!/usr/local/bin/gosh
 
-(include "boardgame.scm")
+(include "gridgame.scm")
 
 (define-class <othello> (<gridgame>)
  ())

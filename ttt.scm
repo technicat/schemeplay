@@ -2,24 +2,27 @@
 
 (use gauche.parseopt) ; command line args
 
-(include "boardgame.scm")
+(include "gridgame.scm")
 
 (define (main args)
  (let-args (cdr args)
   ((r "l|level=i" 1)
-   . restargs
-   )
+   . restargs)
   (let ((game (make <tictactoe>)))
-   (play-self game)
+   (play game)
    )))
 
-(define-class <tictactoe> (<boardgame>)
+(define-class <tictactoe> (<gridgame>)
  ())
 
-(define-class <x> (<player>)
+(define-method initialize ((game <tictactoe>) args)
+ (next-method)
+ (set! (size game) 3))
+
+(define-class <x> (<piece>)
  ())
 
-(define-class <o> (<player>)
+(define-class <o> (<piece>)
  ())
 
 
