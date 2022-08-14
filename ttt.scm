@@ -17,7 +17,8 @@
 
 (define-method initialize ((game <tictactoe>) args)
  (next-method)
- (set! (size game) 3))
+ (set! (size game) 3)
+ (make-board game))
 
 (define-class <x> (<piece>)
  ())
