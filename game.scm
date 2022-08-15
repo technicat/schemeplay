@@ -23,6 +23,9 @@
 (define-method your-move ((player <human>) (game <game>))
  (string-trim (read-line)))
 
+(define-method your-move ((player <computer>) (game <game>))
+ (print "Thinking..."))
+
 (define-method play ((game <game>))
  (if (end? game)
   (print "Game Over")
