@@ -19,9 +19,9 @@
  (newline))
 
 (define-method show-square ((game <gridgame>) i j)
-; (format #t "~s" (char (get-piece game i j)))
+ ; (format #t "~s" (char (get-piece game i j)))
  (if (= (+ 1 j) (board-size game))
- ;; (format #t "|")
+  ;; (format #t "|")
   (newline)))
 
 (define-method get-piece ((game <gridgame>) i j)
